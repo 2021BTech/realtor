@@ -4,14 +4,19 @@ module.exports = {
   theme: {
     colors: {
       transparent: "transparent",
+      red: "#D71313",
       white: "#ffffff",
-      grey: "F5F5F5",
+      black: "#000000",
+      grey: "#F5F5F5",
       slate: "#334155",
       cream: "#F2EAD3",
-      darkerCream: "DFD7BF",
-      chocolate: "3F2305",
+      darkerCream: "#DFD7BF",
+      chocolate: "#3F2305",
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    // ...
+  ],
 };
