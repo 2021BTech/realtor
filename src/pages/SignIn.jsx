@@ -1,6 +1,6 @@
 import React from "react";
 //img
-import img from "../assets/signin.png";
+import img from "../assets/sign.png";
 //state
 import { useState } from "react";
 //icons
