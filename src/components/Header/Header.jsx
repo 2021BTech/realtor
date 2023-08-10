@@ -45,7 +45,7 @@ const Header = () => {
                 pathMatchRoute("/signIn") && "text-cream border-b-darkerCream"
               }`}
             >
-              <a href="/signIn">Sing-In</a>
+              <a href="/signIn">Sign-In</a>
             </li>
           </ul>
         </div>
