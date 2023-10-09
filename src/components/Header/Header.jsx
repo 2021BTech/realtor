@@ -29,7 +29,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-slate border-b shadow-sm sticky top-0 z-50">
+    <div className="bg-slate border-b shadow-sm sticky top-0 z-40">
       <header className="flex justify-between items-center px-3 max-w-6xl mx-auto">
         <div className="flex space-x-2" onClick={() => navigate("/")}>
           <img src={img} alt="logo" className="h-12 cursor-pointer" />
