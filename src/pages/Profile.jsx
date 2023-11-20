@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Profile = () => {
   const auth = getAuth();
   const navigate = useNavigate();
-  const [changeDetail, setChangeDetail] = useState("false");
+  const [changeDetail, setChangeDetail] = useState(false);
   const [formDate, setFormDate] = useState({
     name: auth.currentUser.displayName,
     email: auth.currentUser.email,

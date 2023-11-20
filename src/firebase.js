@@ -5,13 +5,15 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCc2jfM1cT93Gl5f-auTVYRB5lqElvsh0c",
-  authDomain: "realtor-react-9241d.firebaseapp.com",
-  projectId: "realtor-react-9241d",
-  storageBucket: "realtor-react-9241d.appspot.com",
-  messagingSenderId: "693474815047",
-  appId: "1:693474815047:web:d4488a516b7c886eed9562",
+  apiKey: "AIzaSyDVj_K0mQFxx07KcciaA5OTRd6pFT9HA5o",
+  authDomain: "realtor-3d645.firebaseapp.com",
+  projectId: "realtor-3d645",
+  storageBucket: "realtor-3d645.appspot.com",
+  messagingSenderId: "215409598717",
+  appId: "1:215409598717:web:01937321fec1b302b85e94",
+  measurementId: "G-LCPRRR5SFF",
 };
 
 // Initialize Firebase

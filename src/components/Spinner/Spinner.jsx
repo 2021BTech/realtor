@@ -1,6 +1,6 @@
 import React from "react";
 //loader
-import Loader from "../../assets/Infinity-1s-200px.svg";
+import Loader from "../../assets/Gear-0.2s-200px.svg";
 
 const Spinner = () => {
   return (
