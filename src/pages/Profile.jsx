@@ -53,7 +53,7 @@ const Profile = () => {
   return (
     <>
       <section className="max-w-4xl mx-auto flex justify-center items-center flex-col">
-        <h1 className="text-3xl text-center mt-6 font-bold text-slate">
+        <h1 className="text-4xl text-center mt-6 font-bold text-slate font-[Roboto}">
           My Account
         </h1>
         <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto">
