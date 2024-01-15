@@ -1,6 +1,6 @@
 import React from "react";
 //img
-import img from "../assets/fh.png";
+import forgot from "../assets/forgot_pass.svg";
 //state
 import { useState } from "react";
 //link
@@ -10,6 +10,8 @@ import OAuth from "../components/button/OAuth";
 //firebase
 import { toast } from "react-toastify";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+//icons
+import { RiLockPasswordLine } from "react-icons/ri";
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
@@ -31,14 +33,18 @@ const ForgetPassword = () => {
 
   return (
     <section>
-      <h1 className="text-4xl text-center mt-6 font-bold text-slate">
-        Forgot Password
-      </h1>
+      <div className="flex items-center justify-center">
+        <h1 className="text-3xl text-center mt-16 font-bold text-white border-b-2 p-4 bg-slate rounded-full shadow-md shadow-slate flex items-start justify-center gap-4">
+          <RiLockPasswordLine />
+          Forgot Password
+        </h1>
+      </div>
+
       {/* container */}
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto ">
         {/* img div */}
         <div className="md:w-[67%] lg:w-[50%] mb-12 md:mb-6">
-          <img src={img} alt="key" className="w-full rounded-2xl" />
+          <img src={forgot} alt="key" className="w-full rounded-2xl" />
         </div>
         {/* form div */}
         <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20">
@@ -77,9 +83,10 @@ const ForgetPassword = () => {
             <div>
               <button
                 type="submit"
-                className="w-full bg-slate text-white px-7 py-3 text-sm font-bold uppercase rounded shadow-md hover:bg-slate transition duration-150 ease-in-out hover:shadow-lg active:bg-slate-800"
+                className="w-full bg-slate text-white px-7 py-3 text-sm font-bold uppercase border-b-2 rounded-full shadow-slate shadow-md hover:bg-slate transition duration-150 ease-in-out hover:shadow-lg active:bg-slate-800 flex items-center justify-center gap-4"
               >
                 Send reset Password
+                <RiLockPasswordLine />
               </button>
             </div>
             <div className="flex items-center my-4 before:border-t before:flex-1 before:border-black after:border-t after:flex-1  after:border-black">

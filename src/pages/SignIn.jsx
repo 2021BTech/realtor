@@ -1,10 +1,11 @@
 import React from "react";
 //img
-import img from "../assets/sign.png";
+import log2 from "../assets/log_in.svg";
 //state
 import { useState } from "react";
 //icons
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import { IoMdLogIn } from "react-icons/io";
 //link
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -46,14 +47,18 @@ const SignIn = () => {
   }
   return (
     <section>
-      <h1 className="text-4xl text-center mt-6 font-bold text-slate">
-        Sign-In
-      </h1>
+      <div className="flex items-center justify-center">
+        <h1 className="text-3xl text-center mt-16 font-bold text-white border-b-2 p-4 bg-slate rounded-full shadow-md shadow-slate flex items-start justify-center gap-4">
+          <IoMdLogIn />
+          Welcome Back
+        </h1>
+      </div>
+
       {/* container */}
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto ">
         {/* img div */}
         <div className="md:w-[67%] lg:w-[50%] mb-12 md:mb-6">
-          <img src={img} alt="key" className="w-full rounded-2xl" />
+          <img src={log2} alt="key" className="w-full rounded-2xl" />
         </div>
         {/* form div */}
         <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20">
@@ -115,9 +120,10 @@ const SignIn = () => {
             <div>
               <button
                 type="submit"
-                className="w-full bg-slate text-white px-7 py-3 text-sm font-bold uppercase rounded shadow-md hover:bg-slate transition duration-150 ease-in-out hover:shadow-lg active:bg-slate-800"
+                className="w-full bg-slate  text-white px-7 py-3 text-sm font-bold uppercase rounded-full border-b-2 shadow-md shadow-slate hover:bg-slate transition duration-150 ease-in-out hover:shadow-lg active:bg-slate-800 flex items-center justify-center gap-4 "
               >
                 Sign-in
+                <IoMdLogIn />
               </button>
             </div>
             <div className="flex items-center my-4 before:border-t before:flex-1 before:border-black after:border-t after:flex-1  after:border-black">
