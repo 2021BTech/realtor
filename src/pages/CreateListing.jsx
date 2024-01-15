@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from "uuid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { IoIosList } from "react-icons/io";
 
 const CreateListing = () => {
   const navigate = useNavigate();
@@ -179,7 +180,8 @@ const CreateListing = () => {
   return (
     <main className="max-w-md px-2 mx-auto">
       <div className="flex items-center justify-center">
-        <h1 className="text-3xl text-center mt-6 font-bold text-white border border-b-2 bg-slate rounded-full p-2 shadow shadow-slate">
+        <h1 className="text-3xl text-center mt-6 font-bold text-white border border-b-2 bg-slate rounded-full p-2 shadow shadow-slate gap-4 flex items-center justify-center">
+          <IoIosList />
           Create a Listing
         </h1>
       </div>
@@ -452,9 +454,10 @@ const CreateListing = () => {
         </div>
         <button
           type="submit"
-          className="mb-6 w-full px-7 py-3 bg-blue text-white font-medium text-sm uppercase rounded-full border-b-2 shadow-blue shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          className="mb-6 w-full px-7 py-3 bg-blue text-white font-medium text-sm uppercase rounded-full border-b-2 shadow-blue shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center justify-center gap-4"
         >
           Create listing
+          <IoIosList />
         </button>
       </form>
     </main>

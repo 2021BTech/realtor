@@ -102,7 +102,7 @@ const Profile = () => {
   return (
     <>
       <section className="max-w-4xl mx-auto flex justify-center items-center flex-col">
-        <h1 className="text-4xl text-center mt-6 font-bold text-white font-[Roboto} bg-slate p-4 rounded-full border-b-2 shadow-md shadow-slate flex items-center justify-center gap-4">
+        <h1 className="text-3xl text-center mt-6 font-bold text-white font-[Roboto} bg-slate p-4 rounded-full border-b-2 shadow-md shadow-slate flex items-center justify-center gap-4">
           <MdAccountCircle />
           My Account
         </h1>
