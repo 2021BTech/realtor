@@ -58,7 +58,7 @@ const ListingItems = ({ listing, id, onEdit, onDelete }) => {
       </Link>
       {onDelete && (
         <FaTrash
-          className="absolute bottom-2 right-2 h-[14px] cursor-pointer text-red-500"
+          className="absolute bottom-2 right-2 h-[14px] cursor-pointer text-red"
           onClick={() => onDelete(listing.id)}
         />
       )}
