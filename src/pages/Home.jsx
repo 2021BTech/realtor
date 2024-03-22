@@ -119,7 +119,7 @@ const Home = () => {
           <div className="m-2 mb-6">
             <h2 className="px-3 text-2xl mt-6 font-semibold">Recent offers</h2>
             <Link to="/offers">
-              <p className="px-3 text-sm text-blue-600 hover:text-blue-800 transition duration-150 ease-in-out">
+              <p className="px-3 text-sm text-blue hover:text-blue transition duration-150 ease-in-out">
                 Show more offers
               </p>
             </Link>
@@ -140,7 +140,7 @@ const Home = () => {
               Places for rent
             </h2>
             <Link to="/category/rent">
-              <p className="px-3 text-sm text-blue-600 hover:text-blue-800 transition duration-150 ease-in-out">
+              <p className="px-3 text-sm text-blue hover:text-blue transition duration-150 ease-in-out">
                 Show more places for rent
               </p>
             </Link>
@@ -161,7 +161,7 @@ const Home = () => {
               Places for sale
             </h2>
             <Link to="/category/sale">
-              <p className="px-3 text-sm text-blue-600 hover:text-blue-800 transition duration-150 ease-in-out">
+              <p className="px-3 text-sm text-blue hover:text-blue transition duration-150 ease-in-out">
                 Show more places for sale
               </p>
             </Link>
