@@ -94,15 +94,15 @@ const Listing = () => {
             {listing.type === "rent" ? " / month" : ""}
           </p>
           <p className="flex items-center mt-6 mb-3 font-semibold">
-            <FaMapMarkerAlt className="text-green-700 mr-1" />
+            <FaMapMarkerAlt className="text-blue mr-1" />
             {listing.address}
           </p>
           <div className="flex justify-start items-center space-x-4 w-[75%]">
-            <p className="bg-red-800 w-full max-w-[200px] rounded-md p-1 text-white text-center font-semibold shadow-md">
+            <p className="bg-red w-full max-w-[200px] rounded-md p-1 text-white text-center font-semibold shadow-md">
               {listing.type === "rent" ? "Rent" : "Sale"}
             </p>
             {listing.offer && (
-              <p className="w-full max-w-[200px] bg-green-800 rounded-md p-1 text-white text-center font-semibold shadow-md">
+              <p className="w-full max-w-[200px] bg-blue rounded-md p-1 text-white text-center font-semibold shadow-md">
                 ${+listing.regularPrice - +listing.discountedPrice} discount
               </p>
             )}
@@ -133,7 +133,7 @@ const Listing = () => {
             <div className="mt-6">
               <button
                 onClick={() => setContactLandlord(true)}
-                className="px-7 py-3 bg-blue-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg w-full text-center transition duration-150 ease-in-out "
+                className="px-7 py-3 bg-blue text-white font-medium text-sm uppercase rounded shadow-md hover:bg-blue hover:shadow-lg focus:bg-blue focus:shadow-lg w-full text-center transition duration-150 ease-in-out "
               >
                 Contact Landlord
               </button>
