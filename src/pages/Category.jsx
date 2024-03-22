@@ -12,12 +12,13 @@ import {
 import { db } from "../firebase";
 import Spinner from "../components/Spinner/Spinner";
 import ListingItem from "../components/ListingItems/ListingItems";
-import { async } from "@firebase/util";
+import { useParams } from "react-router-dom";
 
-const Offers = () => {
+const Category = () => {
   const [listings, setListings] = useState(null);
   const [loading, setLoading] = useState(true);
   const [lastFetchedListing, setLastFetchListing] = useState(null);
+  const params = useParams();
 
   useEffect(() => {
     async function fetchListings() {
@@ -25,7 +26,7 @@ const Offers = () => {
         const listingRef = collection(db, "listings");
         const q = query(
           listingRef,
-          where("offer", "==", true),
+          where("type", "==", params.categoryName),
           orderBy("timestamp", "desc"),
           limit(8)
         );
@@ -47,14 +48,14 @@ const Offers = () => {
     }
 
     fetchListings();
-  }, []);
+  }, [params.categoryName]);
 
   async function onFetchMoreListings() {
     try {
       const listingRef = collection(db, "listings");
       const q = query(
         listingRef,
-        where("offer", "==", true),
+        where("type", "==", params.categoryName),
         orderBy("timestamp", "desc"),
         startAfter(lastFetchedListing),
         limit(4)
@@ -78,7 +79,7 @@ const Offers = () => {
   return (
     <div className="max-w-6xl mx-auto px-3">
       <h1 className="text-3xl text-center mt-16 font-bold text-white p-4 border-b-2 bg-slate rounded-full shadow-md shadow-slate">
-        Offers
+        {params.categoryName === "rent" ? "Places for rent" : "Places for sale"}
       </h1>
       {loading ? (
         <Spinner />
@@ -99,7 +100,7 @@ const Offers = () => {
             <div className="flex justify-center items-center">
               <button
                 onClick={onFetchMoreListings}
-                className="bg-slate px-3 py-2 text-white  mb-6 mt-6  rounded-full transition duration-150 ease-in-out"
+                className="bg-white px-3 py-1.5 text-gray-700 border border-gray-300 mb-6 mt-6 hover:border-slate-600 rounded transition duration-150 ease-in-out"
               >
                 Load more
               </button>
@@ -107,10 +108,15 @@ const Offers = () => {
           )}
         </>
       ) : (
-        <p>There are no current offers</p>
+        <p>
+          There are no current{" "}
+          {params.categoryName === "rent"
+            ? "places for rent"
+            : "places for sale"}
+        </p>
       )}
     </div>
   );
 };
 
-export default Offers;
+export default Category;
